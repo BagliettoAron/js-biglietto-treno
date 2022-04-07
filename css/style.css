@@ -1,0 +1,19 @@
+/* TEST */
+
+body{
+    background-color: aquamarine;
+}
+
+/* RESET */
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* MAIN */
+
+.ms_ticket-price{
+    
+}
+
