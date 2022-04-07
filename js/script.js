@@ -32,58 +32,28 @@
 // stampare il risultato sulla pagina html
 
 // input section
-const routeDistance = parseInt (prompt("Quanti Km intendi percorrere? (digita numero)"))
+const routeDistance = parseInt(prompt("Quanti Km intendi percorrere? (digita numero)"))
 console.log (routeDistance)
 
-const userAge = parseInt (prompt("Quanti anni hai? (digita numero)"))
+const userAge = parseInt(prompt("Quanti anni hai? (digita numero)"))
 console.log (userAge)
 
 // script section
 // distanza moltiplicato prezzo al km
-let routePrice = (routeDistance) * (0.21)
-console.log (routePrice)
+const routePrice = (routeDistance) * (0.21)
+console.log(routePrice)
 
-// ammontare sconto 20%
-let discount20 = ((routePrice) * 20) / 100
-console.log(discount20)
-// prezzo dalla tratta - ammontare sconto 20%
-let discountedPrice20 = routePrice - discount20
-console.log(discountedPrice20)
-// aprossimazione primi due decimali
-let discountedPrice20Formatted = discountedPrice20.toFixed(2)
-console.log(discountedPrice20Formatted)
-
-// ammontare sconto 40%
-let discount40 = ((routePrice) * 40) / 100
-console.log(discount40)
-// prezzo dalla tratta - ammontare sconto 40%
-let discountedPrice40 = routePrice - discount40
-console.log(discountedPrice40)
-// aprossimazione primi due decimali
-let discountedPrice40Formatted = discountedPrice40.toFixed(2)
-console.log(discountedPrice40Formatted)
-
-
-
-// determinazione della fascia di età appartenente
-let ageRange = "outOfRange"
-
-if (userAge < 17) {
-    ageRange = "under18";
+let discount;
+if (userAge < 18) {
+    discount = ((routePrice) * 20) / 100;
 } else if (userAge >= 65 ) {
-    ageRange = "over65"
+    discount = ((routePrice) * 40) / 100
+} else {
+    discount = 0;
 }
 
-console.log(ageRange)
-
-// sconto applicato alle fasce di età
-let finalPrice = routePrice
-
-if (ageRange = "under18"){
-    finalPrice = discountedPrice20Formatted;
-} else if (ageRange = "over65") {
-    finalPrice = discountedPrice40Formatted
-}
+// aprossimazione primi due decimali
+const finalPrice = (routePrice - discount).toFixed(2);
 
 console.log(finalPrice)
 
