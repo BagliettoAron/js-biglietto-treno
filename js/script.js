@@ -31,14 +31,14 @@
 // output
 // stampare il risultato sulla pagina html
 
-// input
+// input section
 const routeDistance = parseInt (prompt("Quanti Km intendi percorrere? (digita numero)"))
 console.log (routeDistance)
 
 const userAge = parseInt (prompt("Quanti anni hai? (digita numero)"))
 console.log (userAge)
 
-// script
+// script section
 // distanza moltiplicato prezzo al km
 let routePrice = (routeDistance) * (0.21)
 console.log (routePrice)
